@@ -21,6 +21,9 @@ filename = "nekozila.wav"
 analyzer = AudioAnalyzer()
 analyzer.load(filename)
 pygame.init()
+# https://stackoverflow.com/questions/40566585/how-to-change-the-name-of-a-pygame-window
+pygame.display.set_caption('FUMIX')
+
 infoObject = pygame.display.Info()
 
 screen_w = int(infoObject.current_w/1.2)
