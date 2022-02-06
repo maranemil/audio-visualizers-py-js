@@ -23,7 +23,7 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
             function draw() {
                 let radius = 175;
                 let bars = 200;
-       
+
                 // Draw Background
                 // https://www.w3schools.com/tags/ref_colornames.asp
                 ctx.fillStyle = "SlateGray"; // DarkTurquoise Aquamarine DeepPink Orchid Turquoise SlateGray
@@ -75,7 +75,7 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
                 ctx.setLineDash([]);
                 ctx.moveTo(0, 80);
                 ctx.lineTo(1280, 80);
-                ctx.stroke();     
+                ctx.stroke();
 
                 // Draw Circle
                 ctx.beginPath();
@@ -101,7 +101,7 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
                 ctx.fillText("FUMIX", myCanvas.width / 2, myCanvas.height / 2 + 6);
 
                 // Draw bars
-                for (var i = 0; i < bars; i++) {
+                for (let i = 0; i < bars; i++) {
                     let radians = (Math.PI * 2) / bars;
                     let bar_height = freqs[i] * 0.5;
 
@@ -111,9 +111,7 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
                         myCanvas.width / 2 + Math.cos(radians * i) * (radius + bar_height);
                     let y_end =
                         myCanvas.height / 2 + Math.sin(radians * i) * (radius + bar_height);
-                    let color =
-                        "rgb(" + 220 + ", " + (180 - freqs[i]) + ", " + freqs[i] + ")";
-                    ctx.strokeStyle = color;
+                    ctx.strokeStyle = "rgb(" + 220 + ", " + (180 - freqs[i]) + ", " + freqs[i] + ")";
                     ctx.lineWidth = 3;
                     ctx.beginPath();
                     ctx.moveTo(x, y);
@@ -123,6 +121,7 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
                 }
                 requestAnimationFrame(draw);
             }
+
             requestAnimationFrame(draw);
         });
 });

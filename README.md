@@ -7,7 +7,7 @@ Javascript Python visualizers for audio files
 
 + https://gitlab.com/avirzayev/music-visualizer
 
-#### python requrements
+#### python requirements
 
 + https://pypi.org/project/librosa/
 
@@ -21,6 +21,6 @@ Javascript Python visualizers for audio files
 
 + https://codesandbox.io/s/bold-pond-fqq22?file=/sandbox.config.json
 
-#### javascript requrements - run http server
+#### javascript requirements - run http server
 
 + python3 -m http.server 8888
